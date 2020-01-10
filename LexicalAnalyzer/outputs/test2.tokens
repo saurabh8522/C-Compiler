@@ -1,0 +1,145 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             1                             
+MULTI LINE COMMENT            /*struct pair{
+    int a;
+    int b;
+};*/6                             
+KEYWORD                       int                           8                             
+FUNCTION                      fun                           8                             
+LEFT PARENTHESIS              (                             8                             
+KEYWORD                       int                           8                             
+IDENTIFIER                    x                             8                             
+RIGHT PARENTHESIS             )                             8                             
+LEFT BRACE                    {                             8                             
+KEYWORD                       return                        9                             
+IDENTIFIER                    x                             9                             
+OPERATOR                      *                             9                             
+IDENTIFIER                    x                             9                             
+SEMICOLON                     ;                             9                             
+RIGHT BRACE                   }                             10                            
+KEYWORD                       int                           12                            
+KEYWORD                       main                          12                            
+LEFT PARENTHESIS              (                             12                            
+RIGHT PARENTHESIS             )                             12                            
+LEFT BRACE                    {                             12                            
+KEYWORD                       int                           13                            
+IDENTIFIER                    a                             13                            
+OPERATOR                      =                             13                            
+INTEGER                       2                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    b                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    c                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    d                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    e                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    f                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    g                             13                            
+COMMA                         ,                             13                            
+IDENTIFIER                    h                             13                            
+SEMICOLON                     ;                             13                            
+IDENTIFIER                    c                             15                            
+OPERATOR                      =                             15                            
+IDENTIFIER                    a                             15                            
+OPERATOR                      +                             15                            
+IDENTIFIER                    b                             15                            
+SEMICOLON                     ;                             15                            
+IDENTIFIER                    d                             16                            
+OPERATOR                      =                             16                            
+IDENTIFIER                    a                             16                            
+OPERATOR                      *                             16                            
+IDENTIFIER                    b                             16                            
+SEMICOLON                     ;                             16                            
+IDENTIFIER                    e                             17                            
+OPERATOR                      =                             17                            
+IDENTIFIER                    a                             17                            
+OPERATOR                      /                             17                            
+IDENTIFIER                    b                             17                            
+SEMICOLON                     ;                             17                            
+IDENTIFIER                    f                             18                            
+OPERATOR                      =                             18                            
+IDENTIFIER                    a                             18                            
+OPERATOR                      %                             18                            
+IDENTIFIER                    b                             18                            
+SEMICOLON                     ;                             18                            
+IDENTIFIER                    g                             19                            
+OPERATOR                      =                             19                            
+IDENTIFIER                    a                             19                            
+OPERATOR                      &                             19                            
+OPERATOR                      &                             19                            
+IDENTIFIER                    b                             19                            
+SEMICOLON                     ;                             19                            
+IDENTIFIER                    h                             20                            
+OPERATOR                      =                             20                            
+IDENTIFIER                    a                             20                            
+OPERATOR                      ||                            20                            
+IDENTIFIER                    b                             20                            
+SEMICOLON                     ;                             20                            
+IDENTIFIER                    h                             21                            
+OPERATOR                      =                             21                            
+IDENTIFIER                    a                             21                            
+OPERATOR                      *                             21                            
+LEFT PARENTHESIS              (                             21                            
+IDENTIFIER                    a                             21                            
+OPERATOR                      +                             21                            
+IDENTIFIER                    b                             21                            
+RIGHT PARENTHESIS             )                             21                            
+SEMICOLON                     ;                             21                            
+IDENTIFIER                    h                             22                            
+OPERATOR                      =                             22                            
+IDENTIFIER                    a                             22                            
+OPERATOR                      *                             22                            
+IDENTIFIER                    a                             22                            
+OPERATOR                      +                             22                            
+IDENTIFIER                    b                             22                            
+OPERATOR                      *                             22                            
+IDENTIFIER                    b                             22                            
+SEMICOLON                     ;                             22                            
+IDENTIFIER                    h                             23                            
+OPERATOR                      =                             23                            
+FUNCTION                      fun                           23                            
+LEFT PARENTHESIS              (                             23                            
+IDENTIFIER                    b                             23                            
+RIGHT PARENTHESIS             )                             23                            
+SEMICOLON                     ;                             23                            
+SINGLE LINE COMMENT           //This Test case contains operator,structure,delimeters,Function;25                            
+RIGHT BRACE                   }                             26                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	x                   |	Identfier           |	8                   |
+|	d                   |	Identfier           |	13                  |
+|	e                   |	Identfier           |	13                  |
+|	fun                 |	Function            |	8                   |
+|	f                   |	Identfier           |	13                  |
+|	g                   |	Identfier           |	13                  |
+|	h                   |	Identfier           |	13                  |
+|	a                   |	Identfier           |	13                  |
+|	b                   |	Identfier           |	13                  |
+|	c                   |	Identfier           |	13                  |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	2                   |	Integer             |	13                  |
+======================================================================================
+
+

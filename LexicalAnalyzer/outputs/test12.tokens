@@ -1,0 +1,85 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+SINGLE LINE COMMENT           //for loop                    1                             
+SINGLE LINE COMMENT           //continue                    2                             
+SINGLE LINE COMMENT           //while loop                  3                             
+SINGLE LINE COMMENT           //do while loop               4                             
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             6                             
+KEYWORD                       int                           8                             
+KEYWORD                       main                          8                             
+LEFT PARENTHESIS              (                             8                             
+RIGHT PARENTHESIS             )                             8                             
+LEFT BRACE                    {                             9                             
+KEYWORD                       int                           10                            
+IDENTIFIER                    a                             10                            
+OPERATOR                      =                             10                            
+INTEGER                       0                             10                            
+SEMICOLON                     ;                             10                            
+KEYWORD                       for                           11                            
+LEFT PARENTHESIS              (                             11                            
+IDENTIFIER                    a                             11                            
+OPERATOR                      =                             11                            
+INTEGER                       0                             11                            
+SEMICOLON                     ;                             11                            
+IDENTIFIER                    a                             11                            
+OPERATOR                      <                             11                            
+INTEGER                       10                            11                            
+SEMICOLON                     ;                             11                            
+IDENTIFIER                    a                             11                            
+OPERATOR                      ++                            11                            
+RIGHT PARENTHESIS             )                             11                            
+KEYWORD                       continue                      12                            
+SEMICOLON                     ;                             12                            
+KEYWORD                       while                         14                            
+LEFT PARENTHESIS              (                             14                            
+IDENTIFIER                    a                             14                            
+OPERATOR                      >                             14                            
+INTEGER                       0                             14                            
+RIGHT PARENTHESIS             )                             14                            
+LEFT BRACE                    {                             14                            
+IDENTIFIER                    a                             15                            
+OPERATOR                      --                            15                            
+SEMICOLON                     ;                             15                            
+RIGHT BRACE                   }                             16                            
+IDENTIFIER                    do                            18                            
+LEFT BRACE                    {                             18                            
+IDENTIFIER                    a                             19                            
+OPERATOR                      ++                            19                            
+SEMICOLON                     ;                             19                            
+RIGHT BRACE                   }                             20                            
+KEYWORD                       while                         20                            
+LEFT PARENTHESIS              (                             20                            
+IDENTIFIER                    a                             20                            
+OPERATOR                      <                             20                            
+INTEGER                       10                            20                            
+RIGHT PARENTHESIS             )                             20                            
+SEMICOLON                     ;                             20                            
+RIGHT BRACE                   }                             21                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	do                  |	Identfier           |	18                  |
+|	a                   |	Identfier           |	10                  |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	0                   |	Integer             |	10                  |
+|	10                  |	Integer             |	11                  |
+======================================================================================
+
+

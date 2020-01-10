@@ -1,0 +1,82 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             1                             
+PREPROCESSOR DIRECTIVE        #define NUM 5                 2                             
+KEYWORD                       int                           4                             
+KEYWORD                       main                          4                             
+LEFT PARENTHESIS              (                             4                             
+RIGHT PARENTHESIS             )                             4                             
+LEFT BRACE                    {                             5                             
+KEYWORD                       char                          6                             
+IDENTIFIER                    A                             6                             
+LEFT BRACKET                  [                             6                             
+RIGHT BRACKET                 ]                             6                             
+OPERATOR                      =                             6                             
+STRING                        "#define MAX 10"              6                             
+SEMICOLON                     ;                             6                             
+KEYWORD                       char                          7                             
+IDENTIFIER                    B                             7                             
+LEFT BRACKET                  [                             7                             
+RIGHT BRACKET                 ]                             7                             
+OPERATOR                      =                             7                             
+STRING                        "Hello"                       7                             
+SEMICOLON                     ;                             7                             
+KEYWORD                       char                          8                             
+IDENTIFIER                    ch                            8                             
+OPERATOR                      =                             8                             
+CHARACTER                     'B'                           8                             
+SEMICOLON                     ;                             8                             
+KEYWORD                       unsigned                      9                             
+IDENTIFIER                    a                             9                             
+OPERATOR                      =                             9                             
+INTEGER                       1                             9                             
+SEMICOLON                     ;                             9                             
+FUNCTION                      printf                        10                            
+LEFT PARENTHESIS              (                             10                            
+STRING                        "String = %s Value of Pi = %f"10                            
+COMMA                         ,                             10                            
+IDENTIFIER                    A                             10                            
+COMMA                         ,                             10                            
+FLOATING POINT                3.14                          10                            
+RIGHT PARENTHESIS             )                             10                            
+SEMICOLON                     ;                             10                            
+	KEYWORD                       return                        12                            
+INTEGER                       0                             12                            
+SEMICOLON                     ;                             12                            
+RIGHT BRACE                   }                             13                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	printf              |	Function            |	10                  |
+|	A                   |	Identfier           |	6                   |
+|	B                   |	Identfier           |	7                   |
+|	a                   |	Identfier           |	9                   |
+|	ch                  |	Identfier           |	8                   |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	3.14                |	Floating point      |	10                  |
+|	"#define MAX 10"    |	String              |	6                   |
+|	"Hello"             |	String              |	7                   |
+|	"String = %s Value of Pi = %f"|	String              |	10                  |
+|	0                   |	Integer             |	12                  |
+|	'B'                 |	Character           |	8                   |
+|	1                   |	Integer             |	9                   |
+======================================================================================
+
+

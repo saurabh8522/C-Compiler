@@ -1,0 +1,105 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+SINGLE LINE COMMENT           // Mixture of tests, comments 1                             
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             3                             
+KEYWORD                       int                           4                             
+KEYWORD                       main                          4                             
+LEFT PARENTHESIS              (                             4                             
+RIGHT PARENTHESIS             )                             4                             
+LEFT BRACE                    {                             5                             
+	KEYWORD                       int                           6                             
+IDENTIFIER                    a                             6                             
+COMMA                         ,                             6                             
+IDENTIFIER                    b                             6                             
+SEMICOLON                     ;                             6                             
+	KEYWORD                       char                          7                             
+IDENTIFIER                    c                             7                             
+SEMICOLON                     ;                             7                             
+	KEYWORD                       for                           8                             
+LEFT PARENTHESIS              (                             8                             
+IDENTIFIER                    a                             8                             
+OPERATOR                      =                             8                             
+INTEGER                       0                             8                             
+SEMICOLON                     ;                             8                             
+IDENTIFIER                    a                             8                             
+OPERATOR                      <                             8                             
+INTEGER                       29                            8                             
+SEMICOLON                     ;                             8                             
+IDENTIFIER                    a                             8                             
+OPERATOR                      ++                            8                             
+RIGHT PARENTHESIS             )                             8                             
+	LEFT BRACE                    {                             9                             
+		KEYWORD                       if                            10                            
+LEFT PARENTHESIS              (                             10                            
+IDENTIFIER                    a                             10                            
+OPERATOR                      <                             10                            
+INTEGER                       15                            10                            
+RIGHT PARENTHESIS             )                             10                            
+LEFT BRACE                    {                             10                            
+			FUNCTION                      printf                        11                            
+LEFT PARENTHESIS              (                             11                            
+STRING                        "Hello World"                 11                            
+RIGHT PARENTHESIS             )                             11                            
+SEMICOLON                     ;                             11                            
+		RIGHT BRACE                   }                             12                            
+	RIGHT BRACE                   }                             13                            
+	KEYWORD                       int                           14                            
+IDENTIFIER                    x                             14                            
+OPERATOR                      =                             14                            
+IDENTIFIER                    a                             14                            
+OPERATOR                      +                             14                            
+IDENTIFIER                    b                             14                            
+SEMICOLON                     ;                             14                            
+	SINGLE LINE COMMENT           // Single Line Comment        15                            
+	MULTI LINE COMMENT            /* This is a 
+	   multi-line comment */17                            
+		KEYWORD                       int                           19                            
+IDENTIFIER                    var1                          19                            
+SEMICOLON                     ;                             19                            
+	KEYWORD                       char                          20                            
+IDENTIFIER                    var2                          20                            
+SEMICOLON                     ;                             20                            
+	FUNCTION                      printf                        21                            
+LEFT PARENTHESIS              (                             21                            
+STRING                        "%d"                          21                            
+COMMA                         ,                             21                            
+IDENTIFIER                    x                             21                            
+RIGHT PARENTHESIS             )                             21                            
+SEMICOLON                     ;                             21                            
+RIGHT BRACE                   }                             22                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	x                   |	Identfier           |	14                  |
+|	printf              |	Function            |	11                  |
+|	a                   |	Identfier           |	6                   |
+|	b                   |	Identfier           |	6                   |
+|	var1                |	Identfier           |	19                  |
+|	var2                |	Identfier           |	20                  |
+|	c                   |	Identfier           |	7                   |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	29                  |	Integer             |	8                   |
+|	"Hello World"       |	String              |	11                  |
+|	"%d"                |	String              |	21                  |
+|	0                   |	Integer             |	8                   |
+|	15                  |	Integer             |	10                  |
+======================================================================================
+
+

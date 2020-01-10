@@ -1,0 +1,87 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             1                             
+KEYWORD                       int                           3                             
+KEYWORD                       main                          3                             
+LEFT PARENTHESIS              (                             3                             
+RIGHT PARENTHESIS             )                             3                             
+LEFT BRACE                    {                             4                             
+	SINGLE LINE COMMENT           //Program to add 2 numbers and increment by 15                             
+	KEYWORD                       int                           6                             
+IDENTIFIER                    a                             6                             
+LEFT BRACKET                  [                             6                             
+INTEGER                       3                             6                             
+RIGHT BRACKET                 ]                             6                             
+OPERATOR                      =                             6                             
+LEFT BRACE                    {                             6                             
+INTEGER                       1                             6                             
+COMMA                         ,                             6                             
+INTEGER                       2                             6                             
+RIGHT BRACE                   }                             6                             
+SEMICOLON                     ;                             6                             
+	IDENTIFIER                    a                             7                             
+LEFT BRACKET                  [                             7                             
+INTEGER                       2                             7                             
+RIGHT BRACKET                 ]                             7                             
+OPERATOR                      =                             7                             
+IDENTIFIER                    a                             7                             
+LEFT BRACKET                  [                             7                             
+INTEGER                       1                             7                             
+RIGHT BRACKET                 ]                             7                             
+OPERATOR                      +                             7                             
+IDENTIFIER                    a                             7                             
+LEFT BRACKET                  [                             7                             
+INTEGER                       2                             7                             
+RIGHT BRACKET                 ]                             7                             
+SEMICOLON                     ;                             7                             
+	IDENTIFIER                    a                             8                             
+LEFT BRACKET                  [                             8                             
+INTEGER                       2                             8                             
+RIGHT BRACKET                 ]                             8                             
+OPERATOR                      ++                            8                             
+SEMICOLON                     ;                             8                             
+	FUNCTION                      printf                        10                            
+LEFT PARENTHESIS              (                             10                            
+STRING                        "%d"                          10                            
+COMMA                         ,                             10                            
+IDENTIFIER                    a                             10                            
+LEFT BRACKET                  [                             10                            
+INTEGER                       2                             10                            
+RIGHT BRACKET                 ]                             10                            
+RIGHT PARENTHESIS             )                             10                            
+SEMICOLON                     ;                             10                            
+	KEYWORD                       return                        12                            
+INTEGER                       0                             12                            
+SEMICOLON                     ;                             12                            
+RIGHT BRACE                   }                             13                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	printf              |	Function            |	10                  |
+|	a                   |	Identfier           |	6                   |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	2                   |	Integer             |	6                   |
+|	3                   |	Integer             |	6                   |
+|	"%d"                |	String              |	10                  |
+|	0                   |	Integer             |	12                  |
+|	1                   |	Integer             |	6                   |
+======================================================================================
+
+
