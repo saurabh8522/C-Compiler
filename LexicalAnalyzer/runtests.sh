@@ -1,7 +1,31 @@
 #!/bin/bash
 # Usage ./runtests.sh for redirecting outputs to file,
 # and with an arguement to print on commandline as well
+spinner=(🔹◽️◽️◽️◽️ ◽️🔹◽️◽️◽️ ◽️◽️🔹◽️◽️ ◽️◽️◽️🔹◽️ ◽️◽️◽️◽️🔹 ◽️◽️◽️🔹◽️ ◽️◽️🔹◽️◽️ ◽️🔹◽️◽️◽️);
+count(){
+  spin &
+  pid=$!
 
+  for i in `seq 1 5`
+  do
+    sleep 1;
+  done
+
+  kill $pid  
+}
+
+spin(){
+  while [ 1 ]
+  do 
+    for i in ${spinner[@]}; 
+    do 
+      echo -ne "\rLoading$i";
+      sleep 0.1
+    done;
+  done
+}
+
+count
 DIRECTORY='outputs/'
 
 if [ -d "$DIRECTORY" ]; then
@@ -23,6 +47,8 @@ for testcase in $(ls Test_Cases); do
     fi
     printf "===============================================\n\n\n"
     printf "Scanning $testcase ↓\n"
+	count
+	printf "\nLoading completed. ✔️ \n"
     sleep 2
     cat $TEMP_OUTPUT
 
@@ -31,5 +57,7 @@ for testcase in $(ls Test_Cases); do
     eval $FILTERED_OUTPUT > $FINAL_OUTPUT
     rm $TEMP_OUTPUT
 
-    printf "$testcase scanned. ✔ \n"
+    printf "$testcase scanned. ✔️ \n"
 done
+
+printf "Successful Testing ✔️ \n"
