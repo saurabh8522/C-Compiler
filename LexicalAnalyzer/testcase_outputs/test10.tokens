@@ -1,0 +1,216 @@
+
+================================================================================================================================
+							Lexical Analyser for C 
+================================================================================================================================
+
+TOKEN TYPE                    		TOKEN VALUE                   		TOKEN LINE NUMBER         
+SINGLE LINE COMMENT           		//modifiers                   		1                             
+SINGLE LINE COMMENT           		//arithmetic operation        		2                             
+SINGLE LINE COMMENT           		//logical operations          		3                             
+HEADER                        		#include<stdio.h>             		5                             
+KEYWORD                       		int                           		6                             
+KEYWORD                       		main                          		6                             
+LEFT PARENTHESIS              		(                             		6                             
+RIGHT PARENTHESIS             		)                             		6                             
+LEFT BRACE                    		{                             		7                             
+KEYWORD                       		long                          		8                             
+KEYWORD                       		int                           		8                             
+IDENTIFIER                    		a                             		8                             
+COMMA                         		,                             		8                             
+IDENTIFIER                    		b                             		8                             
+KEYWORD                       		unsigned                      		9                             
+KEYWORD                       		long                          		9                             
+KEYWORD                       		int                           		9                             
+IDENTIFIER                    		x                             		9                             
+SEMICOLON                     		;                             		9                             
+KEYWORD                       		signed                        		10                            
+KEYWORD                       		short                         		10                            
+KEYWORD                       		int                           		10                            
+IDENTIFIER                    		y                             		10                            
+SEMICOLON                     		;                             		10                            
+KEYWORD                       		signed                        		11                            
+KEYWORD                       		short                         		11                            
+IDENTIFIER                    		z                             		11                            
+SEMICOLON                     		;                             		11                            
+KEYWORD                       		int                           		12                            
+INTEGER                       		9                             		12                            
+IDENTIFIER                    		w                             		12                            
+SEMICOLON                     		;                             		12                            
+IDENTIFIER                    		a                             		13                            
+OPERATOR                      		=                             		13                            
+INTEGER                       		23                            		13                            
+SEMICOLON                     		;                             		13                            
+IDENTIFIER                    		b                             		14                            
+OPERATOR                      		=                             		14                            
+INTEGER                       		15                            		14                            
+SEMICOLON                     		;                             		14                            
+KEYWORD                       		int                           		15                            
+IDENTIFIER                    		c                             		15                            
+OPERATOR                      		=                             		15                            
+IDENTIFIER                    		a                             		15                            
+OPERATOR                      		+                             		15                            
+IDENTIFIER                    		b                             		15                            
+SEMICOLON                     		;                             		15                            
+FUNCTION                      		printf                        		16                            
+LEFT PARENTHESIS              		(                             		16                            
+STRING                        		"%d"                          		16                            
+COMMA                         		,                             		16                            
+IDENTIFIER                    		c                             		16                            
+RIGHT PARENTHESIS             		)                             		16                            
+SEMICOLON                     		;                             		16                            
+IDENTIFIER                    		c                             		17                            
+OPERATOR                      		=                             		17                            
+IDENTIFIER                    		a                             		17                            
+OPERATOR                      		-                             		17                            
+IDENTIFIER                    		b                             		17                            
+SEMICOLON                     		;                             		17                            
+FUNCTION                      		printf                        		18                            
+LEFT PARENTHESIS              		(                             		18                            
+STRING                        		"%d"                          		18                            
+COMMA                         		,                             		18                            
+IDENTIFIER                    		c                             		18                            
+RIGHT PARENTHESIS             		)                             		18                            
+SEMICOLON                     		;                             		18                            
+IDENTIFIER                    		c                             		19                            
+OPERATOR                      		=                             		19                            
+IDENTIFIER                    		a                             		19                            
+OPERATOR                      		*                             		19                            
+IDENTIFIER                    		b                             		19                            
+SEMICOLON                     		;                             		19                            
+FUNCTION                      		printf                        		20                            
+LEFT PARENTHESIS              		(                             		20                            
+STRING                        		"%d"                          		20                            
+COMMA                         		,                             		20                            
+IDENTIFIER                    		c                             		20                            
+RIGHT PARENTHESIS             		)                             		20                            
+SEMICOLON                     		;                             		20                            
+IDENTIFIER                    		c                             		21                            
+OPERATOR                      		=                             		21                            
+IDENTIFIER                    		a                             		21                            
+OPERATOR                      		/                             		21                            
+IDENTIFIER                    		b                             		21                            
+SEMICOLON                     		;                             		21                            
+FUNCTION                      		printf                        		22                            
+LEFT PARENTHESIS              		(                             		22                            
+STRING                        		"%d"                          		22                            
+COMMA                         		,                             		22                            
+IDENTIFIER                    		c                             		22                            
+RIGHT PARENTHESIS             		)                             		22                            
+SEMICOLON                     		;                             		22                            
+IDENTIFIER                    		c                             		23                            
+OPERATOR                      		=                             		23                            
+IDENTIFIER                    		a                             		23                            
+OPERATOR                      		%                             		23                            
+IDENTIFIER                    		b                             		23                            
+SEMICOLON                     		;                             		23                            
+FUNCTION                      		printf                        		24                            
+LEFT PARENTHESIS              		(                             		24                            
+STRING                        		"%d"                          		24                            
+COMMA                         		,                             		24                            
+IDENTIFIER                    		c                             		24                            
+RIGHT PARENTHESIS             		)                             		24                            
+SEMICOLON                     		;                             		24                            
+IDENTIFIER                    		c                             		26                            
+OPERATOR                      		=                             		26                            
+LEFT PARENTHESIS              		(                             		26                            
+IDENTIFIER                    		a                             		26                            
+OPERATOR                      		>=                            		26                            
+IDENTIFIER                    		b                             		26                            
+RIGHT PARENTHESIS             		)                             		26                            
+SEMICOLON                     		;                             		26                            
+FUNCTION                      		printf                        		27                            
+LEFT PARENTHESIS              		(                             		27                            
+STRING                        		"%d"                          		27                            
+COMMA                         		,                             		27                            
+IDENTIFIER                    		c                             		27                            
+RIGHT PARENTHESIS             		)                             		27                            
+SEMICOLON                     		;                             		27                            
+IDENTIFIER                    		c                             		28                            
+OPERATOR                      		=                             		28                            
+LEFT PARENTHESIS              		(                             		28                            
+IDENTIFIER                    		a                             		28                            
+OPERATOR                      		<=                            		28                            
+IDENTIFIER                    		b                             		28                            
+RIGHT PARENTHESIS             		)                             		28                            
+SEMICOLON                     		;                             		28                            
+FUNCTION                      		printf                        		29                            
+LEFT PARENTHESIS              		(                             		29                            
+STRING                        		"%d"                          		29                            
+COMMA                         		,                             		29                            
+IDENTIFIER                    		c                             		29                            
+RIGHT PARENTHESIS             		)                             		29                            
+SEMICOLON                     		;                             		29                            
+IDENTIFIER                    		c                             		30                            
+OPERATOR                      		=                             		30                            
+LEFT PARENTHESIS              		(                             		30                            
+IDENTIFIER                    		a                             		30                            
+OPERATOR                      		==                            		30                            
+IDENTIFIER                    		b                             		30                            
+RIGHT PARENTHESIS             		)                             		30                            
+SEMICOLON                     		;                             		30                            
+FUNCTION                      		printf                        		31                            
+LEFT PARENTHESIS              		(                             		31                            
+STRING                        		"%d"                          		31                            
+COMMA                         		,                             		31                            
+IDENTIFIER                    		c                             		31                            
+RIGHT PARENTHESIS             		)                             		31                            
+SEMICOLON                     		;                             		31                            
+IDENTIFIER                    		c                             		32                            
+OPERATOR                      		=                             		32                            
+LEFT PARENTHESIS              		(                             		32                            
+IDENTIFIER                    		a                             		32                            
+OPERATOR                      		!=                            		32                            
+IDENTIFIER                    		b                             		32                            
+RIGHT PARENTHESIS             		)                             		32                            
+SEMICOLON                     		;                             		32                            
+FUNCTION                      		printf                        		33                            
+LEFT PARENTHESIS              		(                             		33                            
+STRING                        		"%d"                          		33                            
+COMMA                         		,                             		33                            
+IDENTIFIER                    		c                             		33                            
+RIGHT PARENTHESIS             		)                             		33                            
+SEMICOLON                     		;                             		33                            
+RIGHT BRACE                   		}                             		34                            
+
+
+================================================================================================================================
+							Symbol Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	printf              |	Function            |	16                  |
+|	w                   |	Identfier           |	12                  |
+|	x                   |	Identfier           |	9                   |
+|	y                   |	Identfier           |	10                  |
+|	z                   |	Identfier           |	11                  |
+|	a                   |	Identfier           |	8                   |
+|	b                   |	Identfier           |	8                   |
+|	c                   |	Identfier           |	15                  |
+================================================================================================================================
+
+
+
+
+================================================================================================================================
+							Constant Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	"%d"                |	String              |	16                  |
+|	15                  |	Integer             |	14                  |
+|	23                  |	Integer             |	13                  |
+|	9                   |	Integer             |	12                  |
+================================================================================================================================
+
+
+
+
+================================================================================================================================
+							Header Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	#include<stdio.h>   |	Header              |	5                   |
+================================================================================================================================
+
+

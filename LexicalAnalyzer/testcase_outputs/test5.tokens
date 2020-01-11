@@ -1,0 +1,122 @@
+
+================================================================================================================================
+							Lexical Analyser for C 
+================================================================================================================================
+
+TOKEN TYPE                    		TOKEN VALUE                   		TOKEN LINE NUMBER         
+HEADER                        		#include<stdio.h>             		1                             
+KEYWORD                       		int                           		3                             
+KEYWORD                       		main                          		3                             
+LEFT PARENTHESIS              		(                             		3                             
+RIGHT PARENTHESIS             		)                             		3                             
+LEFT BRACE                    		{                             		4                             
+	KEYWORD                       		int                           		5                             
+IDENTIFIER                    		a                             		5                             
+OPERATOR                      		=                             		5                             
+INTEGER                       		5                             		5                             
+SEMICOLON                     		;                             		5                             
+	KEYWORD                       		while                         		6                             
+LEFT PARENTHESIS              		(                             		6                             
+IDENTIFIER                    		a                             		6                             
+OPERATOR                      		>                             		6                             
+INTEGER                       		0                             		6                             
+RIGHT PARENTHESIS             		)                             		6                             
+	LEFT BRACE                    		{                             		7                             
+		FUNCTION                      		printf                        		8                             
+LEFT PARENTHESIS              		(                             		8                             
+STRING                        		"Hello world"                 		8                             
+RIGHT PARENTHESIS             		)                             		8                             
+SEMICOLON                     		;                             		8                             
+		IDENTIFIER                    		a                             		9                             
+OPERATOR                      		--                            		9                             
+SEMICOLON                     		;                             		9                             
+	RIGHT BRACE                   		}                             		10                            
+	IDENTIFIER                    		a                             		12                            
+OPERATOR                      		=                             		12                            
+INTEGER                       		4                             		12                            
+SEMICOLON                     		;                             		12                            
+	KEYWORD                       		while                         		13                            
+LEFT PARENTHESIS              		(                             		13                            
+IDENTIFIER                    		a                             		13                            
+OPERATOR                      		>                             		13                            
+INTEGER                       		0                             		13                            
+RIGHT PARENTHESIS             		)                             		13                            
+	LEFT BRACE                    		{                             		14                            
+		FUNCTION                      		printf                        		15                            
+LEFT PARENTHESIS              		(                             		15                            
+STRING                        		"%d"                          		15                            
+COMMA                         		,                             		15                            
+IDENTIFIER                    		a                             		15                            
+RIGHT PARENTHESIS             		)                             		15                            
+SEMICOLON                     		;                             		15                            
+		IDENTIFIER                    		a                             		16                            
+OPERATOR                      		--                            		16                            
+SEMICOLON                     		;                             		16                            
+		KEYWORD                       		int                           		17                            
+IDENTIFIER                    		b                             		17                            
+SEMICOLON                     		;                             		17                            
+		IDENTIFIER                    		b                             		18                            
+OPERATOR                      		=                             		18                            
+INTEGER                       		4                             		18                            
+SEMICOLON                     		;                             		18                            
+		KEYWORD                       		while                         		19                            
+LEFT PARENTHESIS              		(                             		19                            
+IDENTIFIER                    		b                             		19                            
+OPERATOR                      		>                             		19                            
+INTEGER                       		0                             		19                            
+RIGHT PARENTHESIS             		)                             		19                            
+		LEFT BRACE                    		{                             		20                            
+			FUNCTION                      		printf                        		21                            
+LEFT PARENTHESIS              		(                             		21                            
+STRING                        		"%d"                          		21                            
+COMMA                         		,                             		21                            
+IDENTIFIER                    		a                             		21                            
+OPERATOR                      		*                             		21                            
+IDENTIFIER                    		b                             		21                            
+RIGHT PARENTHESIS             		)                             		21                            
+SEMICOLON                     		;                             		21                            
+			IDENTIFIER                    		b                             		22                            
+OPERATOR                      		--                            		22                            
+SEMICOLON                     		;                             		22                            
+		RIGHT BRACE                   		}                             		23                            
+	RIGHT BRACE                   		}                             		24                            
+RIGHT BRACE                   		}                             		25                            
+
+
+================================================================================================================================
+							Symbol Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	printf              |	Function            |	8                   |
+|	a                   |	Identfier           |	5                   |
+|	b                   |	Identfier           |	17                  |
+================================================================================================================================
+
+
+
+
+================================================================================================================================
+							Constant Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	"Hello world"       |	String              |	8                   |
+|	"%d"                |	String              |	15                  |
+|	0                   |	Integer             |	6                   |
+|	4                   |	Integer             |	12                  |
+|	5                   |	Integer             |	5                   |
+================================================================================================================================
+
+
+
+
+================================================================================================================================
+							Header Table	
+================================================================================================================================
+|	Symbol              |	Type                |	Line Number         |
+================================================================================================================================
+|	#include<stdio.h>   |	Header              |	1                   |
+================================================================================================================================
+
+
