@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    char s[10]=Welcome!!";
+    char s[10]="Welcome!!";
     char s[]="Welcome!!";
     int a[2] = {1, 2};
     char S[20];
@@ -12,7 +12,9 @@ int main(){
             if(s[2]=='l'){
                 printf("Welcome!!");
             }
-
+            else if(s[2]=='a'){
+              printf("Im new here!");
+            }
             else printf("Bug1\n");
         }
         else printf("Bug2\n");
