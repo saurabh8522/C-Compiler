@@ -11,21 +11,21 @@ count(){
     sleep 1;
   done
 
-  kill $pid  
+  kill $pid
 }
 
 spin(){
   while [ 1 ]
-  do 
-    for i in ${spinner[@]}; 
-    do 
+  do
+    for i in ${spinner[@]};
+    do
       echo -ne "\rLoading$i";
       sleep 0.1
     done;
   done
 }
 
-count
+
 DIRECTORY='outputs/'
 
 if [ -d "$DIRECTORY" ]; then
@@ -37,7 +37,6 @@ lex -l scanner.l && gcc lex.yy.c lib/symbol_table.c -lfl -o scanner.out
 
 for testcase in $(ls Test_Cases); do
     TEMP_OUTPUT="$DIRECTORY$testcase"
-
     ./scanner.out < Test_Cases/$testcase > $TEMP_OUTPUT
 
     if [ $1 ]; then
