@@ -1,0 +1,86 @@
+
+======================================================================================
+			Lexical Analyser for C language
+======================================================================================
+
+TOKEN TYPE                    TOKEN VALUE                   LINE NUMBER               
+PREPROCESSOR DIRECTIVE        #include<stdio.h>             1                             
+KEYWORD                       int                           3                             
+FUNCTION                      square                        3                             
+LEFT PARENTHESIS              (                             3                             
+KEYWORD                       int                           3                             
+IDENTIFIER                    a                             3                             
+RIGHT PARENTHESIS             )                             3                             
+LEFT BRACE                    {                             4                             
+	KEYWORD                       return                        5                             
+LEFT PARENTHESIS              (                             5                             
+IDENTIFIER                    a                             5                             
+OPERATOR                      *                             5                             
+IDENTIFIER                    a                             5                             
+RIGHT PARENTHESIS             )                             5                             
+SEMICOLON                     ;                             5                             
+RIGHT BRACE                   }                             6                             
+MULTI LINE COMMENT            /*struct abc
+{
+	int a;
+	char b;
+};*/12                            
+KEYWORD                       int                           14                            
+KEYWORD                       main                          14                            
+LEFT PARENTHESIS              (                             14                            
+RIGHT PARENTHESIS             )                             14                            
+LEFT BRACE                    {                             15                            
+	KEYWORD                       int                           16                            
+IDENTIFIER                    num                           16                            
+OPERATOR                      =                             16                            
+INTEGER                       2                             16                            
+SEMICOLON                     ;                             16                            
+	KEYWORD                       int                           17                            
+IDENTIFIER                    num2                          17                            
+OPERATOR                      =                             17                            
+FUNCTION                      square                        17                            
+LEFT PARENTHESIS              (                             17                            
+IDENTIFIER                    num                           17                            
+RIGHT PARENTHESIS             )                             17                            
+SEMICOLON                     ;                             17                            
+		FUNCTION                      printf                        19                            
+LEFT PARENTHESIS              (                             19                            
+STRING                        "Square of %d is %d"          19                            
+COMMA                         ,                             19                            
+IDENTIFIER                    num                           19                            
+COMMA                         ,                             19                            
+IDENTIFIER                    num2                          19                            
+RIGHT PARENTHESIS             )                             19                            
+SEMICOLON                     ;                             19                            
+	KEYWORD                       return                        21                            
+INTEGER                       0                             21                            
+SEMICOLON                     ;                             21                            
+RIGHT BRACE                   }                             22                            
+
+
+======================================================================================
+Symbol Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	num                 |	Identfier           |	16                  |
+|	num2                |	Identfier           |	17                  |
+|	printf              |	Function            |	19                  |
+|	square              |	Function            |	3                   |
+|	a                   |	Identfier           |	3                   |
+======================================================================================
+
+
+
+
+======================================================================================
+Constant Table	
+======================================================================================
+|	Symbol              |	Type                |	Line Number         |
+======================================================================================
+|	2                   |	Integer             |	16                  |
+|	"Square of %d is %d"|	String              |	19                  |
+|	0                   |	Integer             |	21                  |
+======================================================================================
+
+

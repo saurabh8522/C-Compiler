@@ -11,17 +11,18 @@ count(){
     sleep 1;
   done
 
-  kill $pid
+
 }
 
 spin(){
-  while [ 1 ]
+  while [ rah ]
   do
     for i in ${spinner[@]};
     do
-      echo -ne "\rLoading$i";
+      echo -ne "\r\t\t\t\t\t\t\t\t\tLoading$i";
       sleep 0.1
     done;
+    break;
   done
 }
 
@@ -39,16 +40,18 @@ for testcase in $(ls Test_Cases); do
     TEMP_OUTPUT="$DIRECTORY$testcase"
     ./scanner.out < Test_Cases/$testcase > $TEMP_OUTPUT
 
-    if [ $1 ]; then
-        printf "===============================================\n\n\n"
-        printf "Scanning $testcase ↓\n"
-        cat $TEMP_OUTPUT
-    fi
-    printf "===============================================\n\n\n"
-    printf "Scanning $testcase ↓\n"
-	count
-	printf "\nLoading completed. ✔️ \n"
-    sleep 2
+    # if [ $1 ]; then
+    #     printf "===============================================\n\n\n"
+    #     printf "Scanning $testcase ↓\n"
+    #     cat $TEMP_OUTPUT
+    # fi
+    printf "=========================================================================================================================================================\n\n\n"
+    printf "\t\t\t\t\t\t\t\t\tScanning $testcase ↓\n"
+	# count
+  spin
+
+	printf "\n\t\t\t\t\t\t\t\t\tLoading completed. ✔️ \n"
+    sleep 0.2
     cat $TEMP_OUTPUT
 
     FILTERED_OUTPUT='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" $TEMP_OUTPUT'
@@ -56,7 +59,6 @@ for testcase in $(ls Test_Cases); do
     eval $FILTERED_OUTPUT > $FINAL_OUTPUT
     rm $TEMP_OUTPUT
 
-    printf "$testcase scanned. ✔️ \n"
+    printf "\t\t\t\t\t\t\t\t\t$testcase scanned. ✔️ \n"
 done
-
-printf "Successful Testing ✔️ \n"
+printf "\t\t\t\t\t\t\t\t\tSuccessful Testing ✔️ \n"
