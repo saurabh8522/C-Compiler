@@ -16,8 +16,10 @@ LEFT BRACKET                  [                             4
 INTEGER                       10                            4                             
 RIGHT BRACKET                 ]                             4                             
 OPERATOR                      =                             4                             
-STRING                        "Welcome!!"                   4                             
-SEMICOLON                     ;                             4                             
+IDENTIFIER                    Welcome                       4                             
+OPERATOR                      !                             4                             
+OPERATOR                      !                             4                             
+ERROR: UNCLOSED STRING   ";                            4                             
 KEYWORD                       char                          5                             
 IDENTIFIER                    s                             5                             
 LEFT BRACKET                  [                             5                             
@@ -82,54 +84,37 @@ STRING                        "Welcome!!"                   13
 RIGHT PARENTHESIS             )                             13                            
 SEMICOLON                     ;                             13                            
 RIGHT BRACE                   }                             14                            
-KEYWORD                       else                          15                            
-KEYWORD                       if                            15                            
-LEFT PARENTHESIS              (                             15                            
-IDENTIFIER                    s                             15                            
-LEFT BRACKET                  [                             15                            
-INTEGER                       2                             15                            
-RIGHT BRACKET                 ]                             15                            
-OPERATOR                      ==                            15                            
-CHARACTER                     'a'                           15                            
-RIGHT PARENTHESIS             )                             15                            
-LEFT BRACE                    {                             15                            
+KEYWORD                       else                          16                            
 FUNCTION                      printf                        16                            
 LEFT PARENTHESIS              (                             16                            
-STRING                        "Im new here!"                16                            
+STRING                        "Bug1\n"                      16                            
 RIGHT PARENTHESIS             )                             16                            
 SEMICOLON                     ;                             16                            
 RIGHT BRACE                   }                             17                            
 KEYWORD                       else                          18                            
 FUNCTION                      printf                        18                            
 LEFT PARENTHESIS              (                             18                            
-STRING                        "Bug1\n"                      18                            
+STRING                        "Bug2\n"                      18                            
 RIGHT PARENTHESIS             )                             18                            
 SEMICOLON                     ;                             18                            
 RIGHT BRACE                   }                             19                            
-KEYWORD                       else                          20                            
-FUNCTION                      printf                        20                            
-LEFT PARENTHESIS              (                             20                            
-STRING                        "Bug2\n"                      20                            
-RIGHT PARENTHESIS             )                             20                            
-SEMICOLON                     ;                             20                            
-RIGHT BRACE                   }                             21                            
-KEYWORD                       else                          23                            
-FUNCTION                      printf                        23                            
-LEFT PARENTHESIS              (                             23                            
-STRING                        "Bug3\n"                      23                            
-RIGHT PARENTHESIS             )                             23                            
+KEYWORD                       else                          21                            
+FUNCTION                      printf                        21                            
+LEFT PARENTHESIS              (                             21                            
+STRING                        "Bug3\n"                      21                            
+RIGHT PARENTHESIS             )                             21                            
+SEMICOLON                     ;                             21                            
+KEYWORD                       int                           23                            
+@OPERATOR                      <                             23                            
+OPERATOR                      -                             23                            
+IDENTIFIER                    _                             23                            
+OPERATOR                      -                             23                            
+OPERATOR                      =                             23                            
+INTEGER                       2                             23                            
 SEMICOLON                     ;                             23                            
-KEYWORD                       int                           25                            
-@OPERATOR                      <                             25                            
-OPERATOR                      -                             25                            
-IDENTIFIER                    _                             25                            
-OPERATOR                      -                             25                            
-OPERATOR                      =                             25                            
-INTEGER                       2                             25                            
-SEMICOLON                     ;                             25                            
-SINGLE LINE COMMENT           //This test case contains nested conditional statement,Array and print statement27                            
-SINGLE LINE COMMENT           //Also there is an error in declaring integer variable which does not match any regular expression.28                            
-RIGHT BRACE                   }                             29                            
+SINGLE LINE COMMENT           //This test case contains nested conditional statement,Array and print statement25                            
+SINGLE LINE COMMENT           //Also there is an error in declaring integer variable which does not match any regular expression.26                            
+RIGHT BRACE                   }                             27                            
 
 
 ======================================================================================
@@ -141,7 +126,8 @@ Symbol Table
 |	printf              |	Function            |	13                  |
 |	S                   |	Identfier           |	7                   |
 |	s                   |	Identfier           |	4                   |
-|	_                   |	Identfier           |	25                  |
+|	_                   |	Identfier           |	23                  |
+|	Welcome             |	Identfier           |	4                   |
 |	a                   |	Identfier           |	6                   |
 ======================================================================================
 
@@ -155,18 +141,16 @@ Constant Table
 ======================================================================================
 |	2                   |	Integer             |	6                   |
 |	20                  |	Integer             |	7                   |
-|	"Welcome!!"         |	String              |	4                   |
-|	"Im new here!"      |	String              |	16                  |
-|	"Bug1\n"            |	String              |	18                  |
-|	"Bug2\n"            |	String              |	20                  |
-|	"Bug3\n"            |	String              |	23                  |
+|	"Welcome!!"         |	String              |	5                   |
+|	"Bug1\n"            |	String              |	16                  |
+|	"Bug2\n"            |	String              |	18                  |
+|	"Bug3\n"            |	String              |	21                  |
 |	0                   |	Integer             |	10                  |
 |	10                  |	Integer             |	4                   |
 |	1                   |	Integer             |	6                   |
 |	'W'                 |	Character           |	10                  |
 |	'e'                 |	Character           |	11                  |
 |	'l'                 |	Character           |	12                  |
-|	'a'                 |	Character           |	15                  |
 ======================================================================================
 
 

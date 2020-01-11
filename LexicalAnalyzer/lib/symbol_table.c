@@ -32,14 +32,8 @@ symbol_node_t *create_symbol_node(const char* symbol, const char *type, const in
 }
 
 void symbol_table_insert(symbol_node_t **symbol_table, const char* symbol, const char *type, const int line_number){
-   if(symbol_table_lookup(symbol_table, symbol)){
-     if(type=="Identfier"{
-       printf("Redeclaration of Variable at line no %d\n",line_number);
-     }
-
-     return;
-   }
-
+   if(symbol_table_lookup(symbol_table, symbol))
+      return;
 
    int hash_index = symbol_table_hash(symbol);
    symbol_node_t *node = create_symbol_node(symbol, type, line_number);

@@ -18,7 +18,6 @@
 
    symbol_node_t *symbol_table[MAX_NODES];
    symbol_node_t *constant_table[MAX_NODES];
-   symbol_node_t *header_table[MAX_NODES];
 
    void print_token(char *info, char *token, int line_number);
 %}
@@ -27,7 +26,7 @@
 digit               [0-9]
 letter              [a-zA-Z]
 alphanum            {letter}|{digit}
-keyword             char|int|float|double|short|long|unsigned|signed|main|while|for|break|if|else|continue|return|void|struct
+keyword             char|int|main|float|double|short|long|unsigned|signed|main|while|for|break|if|else|continue|return|void|struct
 operator            "+"|"-"|"++"|"--"|"!"|"~"|"*"|"/"|"%"|">>"|"<<"|"&"|"^"|\||\|\||"="|">"|"<"|">="|"<="|"=="|"!="
 function            ((_|{letter})({alphanum}|_)*)/[ ]*[(]
 escape_sequences    0|a|b|f|n|r|t|v|"\\"|"\""|"\'"
@@ -36,16 +35,13 @@ escape_sequences    0|a|b|f|n|r|t|v|"\\"|"\""|"\'"
 %%
 \n                                           {}
 " "                                          {}
-"#include"[ ]*"<"{letter}({alphanum})*".h>"   { print_token("PREPROCESSOR DIRECTIVE", yytext, yylineno);
-
-                                                symbol_table_insert(header_table, yytext, "HEADER", yylineno);
-                                              }
+"#include"[ ]*"<"{letter}({alphanum})*".h>"   { print_token("PREPROCESSOR DIRECTIVE", yytext, yylineno); }
 "#define"[ ]+(_|{letter})({alphanum})*[ ]*(.)+   { print_token("PREPROCESSOR DIRECTIVE", yytext, yylineno); }
 
 "//".*                                       { print_token("SINGLE LINE COMMENT", yytext, yylineno); }
 ("/*")(([^*]*[*]+[^*/])*([^*]*[*]+[/]))      { print_token("MULTI LINE COMMENT", yytext, yylineno); }
 
-("/*")(([^*]*([*]+[^/])*)*)*                 { print_token(FORE_RED "ERROR: UNMATCHED COMMENT", yytext, yylineno); }
+("/*")(([^*]*([*]+[^/])*)*)*                 { print_token(FORE_RED "ERROR: MULTI LINE COMMENT NOT CLOSED", yytext, yylineno); }
 
 ("\"")[^\n\"]*("\"")                         {
                                                 print_token("STRING", yytext, yylineno);
@@ -63,12 +59,10 @@ escape_sequences    0|a|b|f|n|r|t|v|"\\"|"\""|"\'"
 
 {keyword}/[ ]*[(]?                           {
                                                 print_token("KEYWORD", yytext, yylineno);
-
                                              }
 
 #include[/"<][ ]*{letter}{letter}*\.h[/">]   {
                                                 print_token("HEADER", yytext, yylineno);
-
                                              }
 
 {operator}                                   { print_token("OPERATOR", yytext, yylineno); }
@@ -106,7 +100,6 @@ escape_sequences    0|a|b|f|n|r|t|v|"\\"|"\""|"\'"
 ","                                          { print_token("COMMA", yytext, yylineno); }
 ";"                                          { print_token("SEMICOLON", yytext, yylineno); }
 
-
 %%
 
 void print_token(char *info, char *token, int line_number){
@@ -127,6 +120,6 @@ int main()
 
    symbol_table_print(symbol_table, "Symbol Table");
    symbol_table_print(constant_table, "Constant Table");
-   symbol_table_print(header_table, "Header Table");
+
    return 0;
 }

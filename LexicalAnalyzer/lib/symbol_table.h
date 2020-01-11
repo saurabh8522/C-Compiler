@@ -30,4 +30,3 @@ void symbol_table_free(symbol_node_t **symbol_table);
 void symbol_table_print(symbol_node_t **symbol_table, const char *table_name);
 
 #endif
-
