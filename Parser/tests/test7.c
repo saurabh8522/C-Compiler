@@ -1,18 +1,24 @@
 #include<stdio.h>
+
+int square(int a)
+{
+	return(a*a);
+}
+
+struct abc
+{
+   int a;
+   char b;
+};
+
 int main()
 {
-    int a;
-    if(a == 3)
-    {
-        a++;
-    }
-    else if(a == 5)
-    {
-        a--;
-    }
-    else 
-    {
-        a += 3;
-    }
-    return 0;
+	struct abc A;
+	A.a = 2;
+	int num = 2;
+	int num2 = square(num);
+	
+	printf("Square of %d is %d", num, num2);
+
+	return 0;
 }

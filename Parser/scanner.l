@@ -187,6 +187,9 @@
 
 	void printST()
 	{
+		for(int i=0;i<130;i++) {
+			printf("-");
+			}
 		printf("%20s | %25s | %20s | %20s | %20s\n","SYMBOL", "CLASS", "TYPE","VALUE", "LINE NO");
 		for(int i=0;i<130;i++) {
 			printf("-");
@@ -205,6 +208,9 @@
 
 	void printCT()
 	{
+	for(int i=0;i<130;i++) {
+		printf("-");
+	}
 		printf("%20s | %25s\n","NAME", "TYPE");
 		for(int i=0;i<130;i++) {
 			printf("-");

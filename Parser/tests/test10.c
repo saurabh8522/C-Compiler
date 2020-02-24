@@ -1,17 +1,34 @@
-// #include <stdio.h>
+//modifiers
+//arithmetic operation
+//logical operations
 
-/*
-This 
-is a
-comment
+#include<stdio.h>
+int main()
+{
+    long int a, b;
+    unsigned long int x;
+    signed short int y;
+    signed short z;
+    int w;
+    a = 23;
+    b = 15;
+    int c = a + b;
+    printf("%d",c);
+    c = a - b;
+    printf("%d",c);
+    c = a * b;
+    printf("%d",c);
+    c = a/b;
+    printf("%d",c);
+    c = a%b;
+    printf("%d",c);
 
-*/
-int main() {
-    // int d[];
-    // int *a[2];
-    // int *x;
-    // int q[];
-    // int wwq[4];
-    int a;
+    c = (a>=b);
+    printf("%d",c);
+    c = (a<=b);
+    printf("%d",c);
+    c = (a==b);
+    printf("%d",c);
+    c = (a!=b);
+    printf("%d",c);
 }
-    /* int n = *d;*/
