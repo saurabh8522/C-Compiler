@@ -1,10 +1,4 @@
-/*
-* Scanner for C language
-*
-* Ref: http://www.quut.com/c/ANSI-C-grammar-l-2011.html
-*
-* @author Shashank P, Praveen Gupta, Ashwin Joisa
-*/
+
 
 %{
 #include "y.tab.h"
