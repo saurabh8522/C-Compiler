@@ -1,10 +1,4 @@
-/*
-* Parser for C language
-*
-* Ref: http://www.quut.com/c/ANSI-C-grammar-y.html
-*
-* @author Shashank P, Praveen Gupta, Ashwin Joisa
-*/
+
 
 %{
 #include <stdio.h>
